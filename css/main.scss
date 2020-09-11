@@ -2,6 +2,7 @@ $colors: (
     navBackground: #fdfdfd,
     lightGray: #FAFAFA,
     gray: #F1F1F1,
+    darkGray: #dadada,
     blue: #2257a4,
     dark: #222222
 );
@@ -31,6 +32,7 @@ a{
     padding: 10px;
     color: color(lightGray);
     text-transform: uppercase;
+    text-align: center;
 }
 
 .blue_button:hover{
@@ -63,6 +65,10 @@ header{
             height: 50px;
             justify-content: flex-end;
         }
+
+        .nav_icon:hover{
+            cursor: pointer;
+        }
     
         nav{
             width: 90%;
@@ -83,22 +89,48 @@ header{
                 top: 60px;
                 left: 0;
                 display: none;
-    
-                a{
-                    width: 100%;
-                    display: block;
-                    background-color: color(navBackground);
-                    padding: 10px;
-                    color: color(dark);
-                }
-
-                a:hover{
-                    background-color: color(gray);
-                    cursor: pointer;
-                }
 
                 .active{
                     background-color: color(gray);
+                }
+
+                ol{
+                    list-style-type:none;
+                    padding:0;
+                    margin:0;
+
+                    li{
+
+                        a, span{
+                            width: 100%;
+                            display: block;
+                            background-color: color(navBackground);
+                            padding: 10px;
+                            color: color(dark);
+                        }
+        
+                        a:hover,
+                        span:hover{
+                            background-color: color(gray);
+                            cursor: pointer;
+                        }
+                    }
+
+                    ul{
+                        list-style-type:none;
+                        padding:0;
+                        margin:0;
+                        top: 60px;
+                    }
+                }
+
+                .submenu{
+                    display: none;
+                    background-color: color(navBackground);
+
+                    a{
+                        margin-left: 15px;
+                    }
                 }
             }
         }
@@ -117,20 +149,75 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            p{
+                text-align: center;
+            }
+
+            p:first-child{
+                font-size: 2rem;
+            }
+
+            p:first-child::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: color(blue);
+                transition: all .5s ease-in-out;
+                transform: scaleX(.4);
+                margin-top: 5px;
+            }
+    
+            p:first-child:hover::after{
+                transform: scaleX(1);
+            }
         }
     }
 
     .welcome{
         width: 100%;
-        min-height: 500px;
-        background: url('../images/background.jpg') center no-repeat;
-        background-size: cover;
+        height: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 60px;
+        position: relative;
+
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 500px;
+        }
+
+        /* Slider images */
+        .mySlides:nth-child(1){
+            background: url('../images/slider1_1260x660.png') center center no-repeat;
+            background-size: cover;
+        }
+
+        .mySlides:nth-child(2){
+            background: url('../images/slider2_1260x660.png') center center no-repeat;
+            background-size: cover;
+        }
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
 
         p{
+            position: absolute;
             text-align: center;
             color: color(lightGray);
             font-size: 1.5rem;
@@ -152,11 +239,6 @@ main {
             p{
                 color: color(dark);
             }
-
-            p:first-child{
-                font-size: 2rem;
-                border-bottom: 2px solid color(blue);
-            }
         }
     }
 
@@ -165,10 +247,6 @@ main {
 
         .container{
             flex-direction: column;
-        }
-        p:first-child{
-            font-size: 2rem;
-            border-bottom: 2px solid color(blue);
         }
     }
 
@@ -196,7 +274,6 @@ main {
 
             p:first-child{
                 font-size: 2rem;
-                border-bottom: 2px solid color(blue);
             }
 
             p:nth-child(2),
@@ -219,7 +296,6 @@ main {
 
             p:first-child{
                 font-size: 2rem;
-                border-bottom: 2px solid color(blue);
             }
 
             p:nth-child(2){
@@ -227,7 +303,7 @@ main {
             }
 
             p:nth-child(4){
-                margin-top: 100px;
+                margin-bottom: 50px;
             }
         }
 
@@ -245,11 +321,6 @@ main {
             width: 90%;
             display: flex;
             flex-direction: column;
-
-            p:first-child{
-                font-size: 2rem;
-                border-bottom: 2px solid color(blue);
-            }
 
             div{
                 width: 100%;
@@ -272,7 +343,7 @@ main {
                 .contact_details{
                     display: flex;
                     flex-direction: column;
-                    width: 90%;
+                    width: 100%;
                     margin-top: 50px;
 
                     p:nth-child(1){
@@ -288,6 +359,10 @@ main {
                             font-size: 1rem;
                             font-weight: normal;
                         }
+                    }
+
+                    p::after{
+                        width: 0%;
                     }
                 }
             }
@@ -325,11 +400,11 @@ footer{
             font-size: .8rem;
     
             div{
-                width: 50%;
+                width: 40%;
                 height: auto;
     
                 img{
-                    height: 100%;
+                    width: 100%;
                 }
             }
 
@@ -385,6 +460,7 @@ footer{
     header{
     
         .container{
+            width: 90%;
         
             nav{
 
@@ -393,20 +469,53 @@ footer{
                 }
         
                 .menu{
-                    width: 500px;
+                    width: 700px;
                     height: 60px;
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
                     position: relative;
                     top: 0;
                     text-align: center;
 
-                    a{
-                        height: 40px;
+                    ol{
                         display: flex;
+                        flex-direction: row;
                         align-items: center;
                         justify-content: center;
+                        position: relative;
+
+                        li{
+                            display: flex;
+                            text-align: center;
+
+                            a, span{
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 10px 10px;
+                            }
+                        }
+
+                        .offertLink{
+                            position: relative;
+                        }
+    
+                        ul{
+                            position: absolute;
+                            top: 60px;
+                            left: 0;
+
+                            li:hover a{
+                                background-color: color(darkGray);
+                            }
+                        }
+                    }
+
+                    .submenu{
+
+                        a{
+                            margin-left: 0px;
+                        }
                     }
                 }
             }
@@ -414,6 +523,34 @@ footer{
     }
 
     main{
+
+        .about_us_index{
+
+            .container{
+                width: 80%;
+            }
+        }
+
+        .project{
+
+            .container{
+                width: 80%;
+            }
+        }
+
+        .about_us{
+
+            .container{
+                width: 80%;
+            }
+        }
+
+        .offert{
+
+            .container{
+                width: 80%;
+            }
+        }
 
         .contact_mention{
 
@@ -428,6 +565,8 @@ footer{
         .contact_info{
     
             .container{
+                width: 80%;
+                margin-bottom: 50px;
     
                 div{
                     height: 500px;
@@ -435,7 +574,7 @@ footer{
                     justify-content: space-between;
 
                     .map{
-                        width: 60%;
+                        width: 70%;
                         order: -1;
 
                         iframe{
@@ -444,7 +583,7 @@ footer{
                     }
 
                     .contact_details{
-                        width: 30%;
+                        width: 20%;
                         height: 400px;
                     }
                 }
@@ -472,6 +611,13 @@ footer{
                 font-size: 1rem;
                 flex-direction: row;
 
+                div{
+
+                    img{
+                        width: 35%;
+                    }
+                }
+
                 .contact_footer_details{
                     width: 50%;
 
@@ -491,4 +637,124 @@ footer{
     }
 }
 
-@media only screen and (min-width: 900px) {}
+@media only screen and (min-width: 950px) {
+
+    .blue_button{
+        width: 250px;
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+
+    header{
+    
+        .container{
+            width: 90%;
+        
+            nav{
+
+                .menu{
+
+                    ol{
+
+                        li{
+
+                            a, span{
+                                padding: 10px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    main {
+        section{
+    
+            .container{
+                min-height: 550px;
+
+                p{
+                    font-size: 1.3rem;
+                }
+    
+                p:first-child{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .welcome{
+            height: 700px;
+
+            .slideshow-container{
+
+                .mySlides{
+                    height: 700px;
+                }
+
+                /* Slider Images */
+                .mySlides:nth-child(1){
+                    background: url('../images/slider1.JPG') center center no-repeat;
+                    background-size: cover;
+                }
+
+                .mySlides:nth-child(2){
+                    background: url('../images/slider2.JPG') center center no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            p{
+                font-size: 2rem;
+    
+                span{
+                    padding: 10px;
+                }
+            }
+        }
+
+        .offert-investments{
+
+            ul{
+
+                li{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .contact_info{
+    
+            .container{
+    
+                div{
+
+                    .contact_details{
+    
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: bold;
+    
+                            span{
+                                font-size: 1.3rem;
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Slider Animation */
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
