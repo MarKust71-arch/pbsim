@@ -1,0 +1,13 @@
+Aby zmienić obrazek w sliderze na stronie głównej należy:
+1. Umieścić zdjęcie w folderze "images" i nazwa np. slider3.jpg
+2. Otworzyć plik css -> main.scss
+3. Nacisnąć na klawiaturze kombinację ctrl + f
+4. Wpisać Slider i nacisnąć enter
+5. Przescrollować odrobinę niżej i widzimy:
+	/* Slider images */
+        .mySlides:nth-child(1){
+            background: url('../images/slider1_4200x2200.png') center center no-repeat;
+            background-size: cover;
+        }
+6. "url('../images/slider1_4200x2200.png')" tutaj znajduje się ścieżka do zdjęcia
+7. Zmieniamy ścieżkę wpisując nazwę naszego zdjęcia na np: "url('../images/slider3.png')"

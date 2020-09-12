@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  background-color: #F1F1F1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blue_button {
+  display: block;
+  background-color: #2257a4;
+  padding: 10px;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.blue_button:hover {
+  background-color: #1a427e;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #fdfdfd;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container img {
+  height: 50px;
+  margin-left: 0;
+}
+
+header .container .nav_icon {
+  width: 50px;
+  height: 50px;
+  justify-content: flex-end;
+}
+
+header .container .nav_icon:hover {
+  cursor: pointer;
+}
+
+header .container nav {
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+header .container nav .menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: none;
+}
+
+header .container nav .menu .active {
+  background-color: #F1F1F1;
+}
+
+header .container nav .menu ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .container nav .menu ol li a, header .container nav .menu ol li span {
+  width: 100%;
+  display: block;
+  background-color: #fdfdfd;
+  padding: 10px;
+  color: #222222;
+}
+
+header .container nav .menu ol li a:hover,
+header .container nav .menu ol li span:hover {
+  background-color: #F1F1F1;
+  cursor: pointer;
+}
+
+header .container nav .menu ol ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 60px;
+}
+
+header .container nav .menu .submenu {
+  display: none;
+  background-color: #fdfdfd;
+}
+
+header .container nav .menu .submenu a {
+  margin-left: 15px;
+}
+
+main section {
+  width: 100%;
+  min-height: 400px;
+}
+
+main section .container {
+  width: 90%;
+  min-height: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section .container p {
+  text-align: center;
+}
+
+main section .container p:first-child {
+  font-size: 2rem;
+}
+
+main section .container p:first-child::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #2257a4;
+  transition: all .5s ease-in-out;
+  transform: scaleX(0.4);
+  margin-top: 5px;
+}
+
+main section .container p:first-child:hover::after {
+  transform: scaleX(1);
+}
+
+main .welcome {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  position: relative;
+  /* Slider images */
+}
+
+main .welcome .slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+main .welcome .mySlides {
+  display: none;
+  width: 100%;
+  height: 500px;
+}
+
+main .welcome .mySlides:nth-child(1) {
+  background: url("../images/slider1_1260x660.png") center center no-repeat;
+  background-size: cover;
+}
+
+main .welcome .mySlides:nth-child(2) {
+  background: url("../images/slider2_1260x660.png") center center no-repeat;
+  background-size: cover;
+}
+
+main .welcome .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+main .welcome p {
+  position: absolute;
+  text-align: center;
+  color: #FAFAFA;
+  font-size: 1.5rem;
+}
+
+main .welcome p span {
+  background-color: #2257a4;
+  display: inline-block;
+  padding: 5px;
+}
+
+main .about_us_index .container {
+  display: flex;
+  flex-direction: column;
+}
+
+main .about_us_index .container p {
+  color: #222222;
+}
+
+main .project {
+  background-color: #FAFAFA;
+}
+
+main .project .container {
+  flex-direction: column;
+}
+
+main .contact_mention .container {
+  flex-direction: column;
+  text-align: center;
+}
+
+main .contact_mention .container p {
+  font-size: 1.5rem;
+}
+
+main .offert {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+main .offert .container {
+  width: 90%;
+  flex-direction: column;
+}
+
+main .offert .container p:first-child {
+  font-size: 2rem;
+}
+
+main .offert .container p:nth-child(2),
+main .offert .container p:nth-child(3) {
+  margin-top: 50px;
+}
+
+main .about_us {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 60px;
+}
+
+main .about_us .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main .about_us .container p:first-child {
+  font-size: 2rem;
+}
+
+main .about_us .container p:nth-child(2) {
+  margin-top: 50px;
+}
+
+main .about_us .container p:nth-child(4) {
+  margin-bottom: 50px;
+}
+
+main .about_us .container:last-child {
+  margin-bottom: 50px;
+}
+
+main .contact_info {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 60px;
+}
+
+main .contact_info .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+main .contact_info .container div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main .contact_info .container div .map {
+  width: 100%;
+  height: auto;
+  order: 2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+main .contact_info .container div .map iframe {
+  width: 90vw;
+  height: 100vh;
+}
+
+main .contact_info .container div .contact_details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+main .contact_info .container div .contact_details p:nth-child(1) {
+  border: none;
+  margin-top: 0;
+}
+
+main .contact_info .container div .contact_details p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main .contact_info .container div .contact_details p span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+main .contact_info .container div .contact_details p::after {
+  width: 0%;
+}
+
+footer {
+  width: 100%;
+  min-height: 100px;
+  color: #FAFAFA;
+}
+
+footer .polygon {
+  width: 100%;
+  height: 100px;
+  background-color: #2257a4;
+  clip-path: polygon(0% 35%, 24% 25%, 48% 35%, 74% 25%, 100% 35%, 100% 100%, 0% 100%);
+  color: #2257a4;
+  margin-bottom: -1px;
+}
+
+footer div {
+  width: 100%;
+  height: auto;
+  background-color: #2257a4;
+}
+
+footer div .container {
+  width: 90%;
+  min-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: .8rem;
+}
+
+footer div .container div {
+  width: 40%;
+  height: auto;
+}
+
+footer div .container div img {
+  width: 100%;
+}
+
+footer div .container .contact_footer_details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer div .container .contact_footer_details .contact_info,
+footer div .container .contact_footer_details .footer_menu {
+  width: 150px;
+  min-height: 150px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer div .container .contact_footer_details .contact_info a, footer div .container .contact_footer_details .contact_info span,
+footer div .container .contact_footer_details .footer_menu a,
+footer div .container .contact_footer_details .footer_menu span {
+  color: #FAFAFA;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+footer div .container .contact_footer_details .contact_info a:hover,
+footer div .container .contact_footer_details .footer_menu a:hover {
+  cursor: pointer;
+  color: #c2bebe;
+}
+
+footer div .container .contact_footer_details .contact_info a:active,
+footer div .container .contact_footer_details .footer_menu a:active {
+  color: #FAFAFA;
+}
+
+footer div p {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+footer div p:last-child {
+  font-size: .8rem;
+}
+
+@media only screen and (min-width: 650px) {
+  header .container {
+    width: 90%;
+  }
+  header .container nav .nav_icon {
+    display: none;
+  }
+  header .container nav .menu {
+    width: 700px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    top: 0;
+    text-align: center;
+  }
+  header .container nav .menu ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  header .container nav .menu ol li {
+    display: flex;
+    text-align: center;
+  }
+  header .container nav .menu ol li a, header .container nav .menu ol li span {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+  }
+  header .container nav .menu ol .offertLink {
+    position: relative;
+  }
+  header .container nav .menu ol ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  header .container nav .menu ol ul li:hover a {
+    background-color: #dadada;
+  }
+  header .container nav .menu .submenu a {
+    margin-left: 0px;
+  }
+  main .about_us_index .container {
+    width: 80%;
+  }
+  main .project .container {
+    width: 80%;
+  }
+  main .about_us .container {
+    width: 80%;
+  }
+  main .offert .container {
+    width: 80%;
+  }
+  main .contact_mention .container p {
+    font-size: 1.8rem;
+  }
+  main .contact_info .container {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  main .contact_info .container div {
+    height: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .contact_info .container div .map {
+    width: 70%;
+    order: -1;
+  }
+  main .contact_info .container div .map iframe {
+    height: 400px;
+  }
+  main .contact_info .container div .contact_details {
+    width: 20%;
+    height: 400px;
+  }
+  footer {
+    width: 100%;
+    min-height: 100px;
+    color: #FAFAFA;
+  }
+  footer .polygon {
+    width: 100%;
+    height: 100px;
+    background-color: #2257a4;
+    clip-path: polygon(0% 35%, 24% 10%, 48% 35%, 74% 10%, 100% 35%, 100% 100%, 0% 100%);
+    color: #2257a4;
+    margin-bottom: -1px;
+  }
+  footer div .container {
+    font-size: 1rem;
+    flex-direction: row;
+  }
+  footer div .container div img {
+    width: 35%;
+  }
+  footer div .container .contact_footer_details {
+    width: 50%;
+  }
+  footer div .container .contact_footer_details .contact_info,
+  footer div .container .contact_footer_details .footer_menu {
+    width: 50%;
+    border: none;
+    border-left: 2px solid #FAFAFA;
+  }
+  footer div .container .contact_footer_details .contact_info a, footer div .container .contact_footer_details .contact_info span,
+  footer div .container .contact_footer_details .footer_menu a,
+  footer div .container .contact_footer_details .footer_menu span {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .blue_button {
+    width: 250px;
+    padding: 15px;
+    font-size: 1.3rem;
+  }
+  header .container {
+    width: 90%;
+  }
+  header .container nav .menu ol li a, header .container nav .menu ol li span {
+    padding: 10px 30px;
+  }
+  main section .container {
+    min-height: 550px;
+  }
+  main section .container p {
+    font-size: 1.3rem;
+  }
+  main section .container p:first-child {
+    font-size: 2.5rem;
+  }
+  main .welcome {
+    height: 700px;
+  }
+  main .welcome .slideshow-container {
+    /* Slider Images */
+  }
+  main .welcome .slideshow-container .mySlides {
+    height: 700px;
+  }
+  main .welcome .slideshow-container .mySlides:nth-child(1) {
+    background: url("../images/slider1.JPG") center center no-repeat;
+    background-size: cover;
+  }
+  main .welcome .slideshow-container .mySlides:nth-child(2) {
+    background: url("../images/slider2.JPG") center center no-repeat;
+    background-size: cover;
+  }
+  main .welcome p {
+    font-size: 2rem;
+  }
+  main .welcome p span {
+    padding: 10px;
+  }
+  main .offert-investments ul li {
+    font-size: 1.3rem;
+  }
+  main .contact_info .container div .contact_details p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  main .contact_info .container div .contact_details p span {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+}
+
+/* Slider Animation */
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
