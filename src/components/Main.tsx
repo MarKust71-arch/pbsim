@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/main.scss';
+import { Fade } from 'react-slideshow-image';
 
 export const Main = () => {
     return (
