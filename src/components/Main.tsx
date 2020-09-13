@@ -1,15 +1,23 @@
 import React from 'react';
 import '../css/main.scss';
-import { Fade } from 'react-slideshow-image';
+import { Slideshow } from './Slideshow';
 
 export const Main = () => {
+    const images = [
+        '../images/slider1_1260x660.png',
+        '../images/slider2_1260x660.png',
+    ];
+
     return (
         <main>
             <section className="welcome">
                 <div className="slideshow-container">
                     {/* <!-- Slider images --> */}
+                    {/*
                     <div className="mySlides fade"></div>
                     <div className="mySlides fade"></div>
+*/}
+                    <Slideshow images={images} />
                 </div>
 
                 <p>
