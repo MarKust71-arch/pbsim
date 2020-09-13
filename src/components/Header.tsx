@@ -6,18 +6,18 @@ export const Header = () => {
         <header>
             <div className="container">
                 <nav>
-                    <a href="../html/index.html">
-                        <img src="../images/logo3_small.png" alt="Logo PBSiM" />
+                    <a href="/">
+                        <img src="../images/logo3_small.png" alt="logo-pbsim" />
                     </a>
                     <div className="menu">
                         <ol>
                             <li>
-                                <a href="../html/index.html" className="active">
+                                <a href="/" className="active">
                                     Start
                                 </a>
                             </li>
                             <li>
-                                <a href="../html/o-nas.html">O nas</a>
+                                <a href="/about">O nas</a>
                             </li>
                             <li className="offertLink">
                                 <span>Oferta</span>

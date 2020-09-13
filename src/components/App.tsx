@@ -1,12 +1,18 @@
 import React from 'react';
-import { Header, Main, Footer } from '.';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home, About } from '.';
 
 export const App = () => {
     return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
+        <Router>
+            <Switch>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
+        </Router>
     );
 };
