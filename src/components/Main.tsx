@@ -1,12 +1,17 @@
 import React from 'react';
 import '../css/main.scss';
 import { Slideshow } from './Slideshow';
+import { SlideshowProps } from './interfaces';
 
 export const Main = () => {
-    const images = [
-        '../images/slider1_1260x660.png',
-        '../images/slider2_1260x660.png',
-    ];
+    const props: SlideshowProps = {
+        images: [
+            '../images/slider1_1260x660.png',
+            '../images/slider2_1260x660.png',
+        ],
+        duration: 3000,
+        arrows: false,
+    };
 
     return (
         <main>
@@ -17,7 +22,11 @@ export const Main = () => {
                     <div className="mySlides fade"></div>
                     <div className="mySlides fade"></div>
 */}
-                    <Slideshow images={images} />
+                    <Slideshow
+                        images={props.images}
+                        duration={props.duration}
+                        arrows={props.arrows}
+                    />
                 </div>
 
                 <p>

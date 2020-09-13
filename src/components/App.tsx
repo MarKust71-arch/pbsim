@@ -4,7 +4,9 @@ import { Header, Main, Footer } from '.';
 export const App = () => {
     return (
         <>
-            <Header /> <Main /> <Footer />
+            <Header />
+            <Main />
+            <Footer />
         </>
     );
 };

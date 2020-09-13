@@ -1,5 +1,3 @@
-//@import "react-slideshow-image/dist/styles.css";
-
 $colors: (
     navBackground: #fdfdfd,
     lightGray: #FAFAFA,
@@ -90,7 +88,6 @@ header{
                 position: absolute;
                 top: 60px;
                 left: 0;
-                display: none;
 
                 .active{
                     background-color: color(gray);
@@ -223,6 +220,7 @@ main {
             text-align: center;
             color: color(lightGray);
             font-size: 1.5rem;
+            z-index: 1;
 
             span{
                 background-color: color(blue);

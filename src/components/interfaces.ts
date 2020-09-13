@@ -1,3 +1,5 @@
-export interface Props {
-    images: { [index: number]: string };
+export interface SlideshowProps {
+    images: string[];
+    duration?: number;
+    arrows?: boolean;
 }
