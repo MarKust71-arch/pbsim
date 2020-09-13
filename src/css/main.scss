@@ -776,6 +776,10 @@ fade{
     }
 }
 
+.each-fade img {
+    min-width: 100%;
+}
+
 /* Slider Animation */
 @-webkit-keyframes fade {
     from {opacity: .4}
