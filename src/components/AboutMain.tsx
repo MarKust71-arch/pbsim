@@ -31,9 +31,11 @@ export const AboutMain = () => {
                         Banku Światowego, czy też Narodowego Funduszu Ochrony
                         Środowiska.
                     </p>
+                    {/*
                     <a href="#">
                         <div className="blue_button">Prezentacja</div>
                     </a>
+*/}
                 </div>
             </section>
         </main>
