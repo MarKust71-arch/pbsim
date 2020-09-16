@@ -214,7 +214,6 @@ function loadData() {
     row.appendChild(data)
     table.appendChild(row)
     for (const [key, value] of Object.entries(JSONParsed.realizacje)) {
-        console.log(value)
         row = document.createElement('tr')
         data = document.createElement('td')
         data.innerText = value.opis
