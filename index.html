@@ -1,149 +1,134 @@
 <!DOCTYPE html>
-<html lang="pl">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+            href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+            rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <title>PBSiM</title>
-    <meta
-      name="description"
-      content="Przedsiębiorstwo Budownictwa Specjalistycznego i Melioracji"
-    />
-    <meta name="keywords" content="PBSiM, wodociągi" />
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon16x16.png"
-    />
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="index.html"
-            ><img src="images/logo3_small.png" alt="Logo PBSiM"
-          /></a>
-          <div class="menu">
-            <ol>
-              <li><a href="index.html" class="active">Start</a></li>
-              <li><a href="o-nas.html">O nas</a></li>
-              <li class="offertLink">
-                <span>Oferta</span>
-                <ul class="submenu">
-                  <li><a href="oferta-inwestycje.html">Inwestycje</a></li>
-                  <li><a href="oferta-nieruchomosci.html">Nieruchomości</a></li>
-                  <li><a href="oferta-praca.html">Praca</a></li>
-                </ul>
-              </li>
-              <li><a href="realizacje.html">Realizacje</a></li>
-              <li><a href="aktualnosci.html">Aktualności</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
-            </ol>
-          </div>
-          <div class="nav_icon">
-            <img src="images/bars-solid.svg" alt="Ikona menu" />
-          </div>
+    <script src="script.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="container page__container">
+        <div class="page__logo">
+            <a href="index.html">
+                <img src="assets/logo.png" class="page__logo--main" />
+            </a>
+        </div>
+        <nav role="navigation">
+            <ul class="menu__items">
+                <li><a href="o-nas.html">O nas</a></li>
+                <li>
+                    <a aria-haspopup="true">Oferta</a>
+                    <ul aria-label="submenu">
+                        <li><a href="inwestycje.html">Inwestycje</a></li>
+                        <li><a href="nieruchomosci.html">Nieruchomości</a></li>
+                        <li><a href="praca.html">Praca</a></li>
+                    </ul>
+                </li>
+                <li><a href="realizacje.html">Realizacje</a></li>
+                <li><a href="aktualnosci.html">Aktualności</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
         </nav>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-      <section class="welcome">
-        <div class="slideshow-container">
+<section class="hero">
+    <div class="container hero__container">
+        <div class="hero__content">
+            <h1 class="hero__claim">
+                Przedsiębiorstwo Budownictwa Specjalistycznego i&nbsp;Melioracji sp. z o.o.
 
-          <!-- Slider images -->
-          <div class="mySlides fade"></div>
-          <div class="mySlides fade"></div>
+            </h1>
 
         </div>
-        <p>
-          <img src="./images/apple-touch-icon-1.png" alt="logo-transp"/><br>
-          <span
-            >Przedsiębiorstwo Budownictwa Specjalistycznego i Melioracji sp. z o.o.</span
-          >
-        </p>
-      </section>
-
-      <section class="about_us_index">
-        <div class="container">
-          <p>PBSiM</p>
-          <p>
-            ODPOWIEDZIALNY I BEZPIECZNY PARTNER
-          </p>
+        <div class="hero__right">
+            <div class="hero__circle" />
         </div>
-      </section>
+        <div class="hero__photo" />
+    </div>
+</section>
 
-      <section class="project">
-        <div class="container">
-          <p>Bieżąca realizacja</p>
-          <p>
-            <b>Nazwa projekt:</b> Uporządkowanie gospodarki wodno-ściekowej na
-            terenie aglomeracji Sława
-          </p>
-          <p>
-            <b>Cel projektu:</b> Głównym celem projektu jest Uporządkowanie
-            gospodarki wodno-ściekowej na terenie aglomeracji Sława dla
-            zapewnienia jej zgodności z obowiązującymi przepisami prawa w
-            zakresie oczyszczania ścieków komunalnych dla obniżenia jego presji
-            na środowisko naturalne, w tym na jednolitą część wód, stan zdrowia
-            ludzi i zwierząt, a także na powstrzymanie zmian klimatu.
-          </p>
-        </div>
-      </section>
-
-      <section class="contact_mention">
-        <div class="container">
-          <p>Masz pytania? Chcesz nawiązać współpracę?</p>
-          <a href="kontakt.html"><div class="blue_button">Kontakt</div></a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="polygon"></div>
-      <div>
-        <div class="container">
-          <div>
-            <img src="images/logo3.png" alt="Logo PBSiM">
-          </div>
-          <div class="contact_footer_details">
-            <div class="contact_info">
-              <span>Tel: <br/>+48 71 7803176</span><br>
-              <span>Email: <br>sekretariat@pbsim.pl</span><br>
+<section class="gray">
+    <div class="container">
+        <div class="content content--gray">
+            <div class="flex">
+            <div class="content__icon">
+                <img src="assets/project.png" />
             </div>
-            <div class="contact_info">
-              <span>REGON:<br>390236507</span><br>
-              <span>NIP:<br>6910012486</span><br>
-              <span>KRS:<br>0000130447</span><br>
-              <span>Kapitał zakładowy:<br>221.000 zł</span><br>
-            </div>
-            <div class="footer_menu">
-              <a href="index.html">Start</a><br>
-              <a href="o-nas.html">O nas</a><br>
-              <a href="oferta.html">Oferta</a><br>
-              <a href="kontakt.html">Kontakt</a>
-            </div>
-          </div>
-        </div>
-        <p>Copyright &copy 2020</p>
-      </div>
-    </footer>
+            <div class="flex-column">
+                <h2 class="content__title content__title--left">
+                    Bieżąca realizacja
+                </h2>
+                <div class="content__text content__text--left">
+                    <h4>Nazwa projektu</h4>
+                    <p>Uporządkowanie gospodarki wodno-ściekowej na terenie aglomeracji Sława</p>
+                </div>
 
-    <script src="js/hide-show-menu.js" type="text/javascript"></script>
-    <script src="js/slider.js" type="text/javascript"></script>
-  </body>
+                <div class="content__text content__text--left">
+                    <h4>Cel projektu</h4>
+                    <p>Głównym celem projektu jest Uporządkowanie gospodarki wodno-ściekowej na terenie aglomeracji Sława
+                        dla zapewnienia jej zgodności z obowiązującymi przepisami prawa w zakresie oczyszczania ścieków
+                        komunalnych dla obniżenia jego presji na środowisko naturalne, w tym na jednolitą część wód, stan
+                        zdrowia ludzi i zwierząt, a także na powstrzymanie zmian klimatu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="content">
+            <h2 class="content__title">
+                Masz pytania? Chcesz nawiązać współpracę?
+            </h2>
+            <div class="home__contact">
+                <h4>ZAPRASZAMY DO KONTAKTU</h4>
+                <h3>POPRZEZ E-MAIL LUB TELEFON</h3>
+
+                <p>E-mail: sekretariat@pbsim.pl</p>
+                <p>Telefon: +48 71 7803176</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer__container">
+        <div class="footer__contact">
+            <div class="footer__contact__item">
+                <p>Przedsiębiorstwo Budownictwa Specjalistycznego i Melioracji sp. z o.o. </p>
+                <p class="footer__contact__item--light">ul. Jaworzyńska 254, 59-220 Legnica</p>
+                <p class="footer__contact__item--light">Tel.: +48 71 7803176</p>
+                <p class="footer__contact__item--light">E-mail: sekretariat@pbsim.pl</p>
+            </div>
+            <div class="footer__contact__item footer__contact__item--right">
+                <p class="footer__contact__item--light">REGON: 39023650</p>
+                <p class="footer__contact__item--light">NIP: 6910012486</p>
+                <p class="footer__contact__item--light">KRS: 0000130447</p>
+                <p class="footer__contact__item--light">Kapitał zakładowy: 221.000 zł</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer__contact__copyright">
+        <p>© Copyright</p>
+        <script>document.write(new Date().getFullYear());
+        </script>
+    </div>
+    <div class="footer__background" />
+</footer>
+</body>
 </html>
