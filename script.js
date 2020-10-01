@@ -1,14 +1,16 @@
 fetch('realizations.json')
-    .then(function (response) {
+    .then( (response) => {
         return response.json();
     })
-    .then(function (data) {
+    .then( (data) => {
         appendData(data);
     })
-    .catch(function (err) {
+    .catch( (err) => {
         console.log('error: ' + err);
     });
-function appendData(data) {
+
+const appendData = (data) => {
+
     const mainContainer = document.getElementById("realizations");
 
     data.map(el => {
@@ -28,13 +30,5 @@ function appendData(data) {
         container.appendChild(date);
         mainContainer.appendChild(container);
     })
-
-    // for (let i in data) {
-    //     const div = document.createElement("div");
-    //     div.innerHTML = 'Nazwa projektu: ' + data[i].opis;
-    //     mainContainer.appendChild(div);
-    // }
-
-    // div.innerHTML = 'Nazwa projektu: ' + data[0].opis
 
 }
