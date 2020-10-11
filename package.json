@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/MarKust71-arch/pbsim/issues"
   },
-  "homepage": "https://github.com/MarKust71-arch/pbsim#readme"
+  "homepage": "https://github.com/MarKust71-arch/pbsim#readme",
+  "devDependencies": {}
 }
