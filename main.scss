@@ -49,14 +49,6 @@ a {
   background: $gray;
 }
 
-.collapsed {
-  display: block;
-
-  @media (max-width: 670px) {
-    display: none !important;
-  }
-}
-
 /* GRID */
 .container {
   max-width: 1020px;
@@ -174,60 +166,17 @@ header {
 }
 
 /* MENU */
-nav {
-  width: 100%;
-
-  @media (max-width: 670px) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-}
-
-.menu {
-  &__submenu {
-    &--mobile {
-      display: none;
-
-      @media (max-width: 670px) {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0;
-      }
-    }
-  }
-}
 .menu__items {
 
-  &--offer {
-    cursor: pointer;
-
-    i {
-      margin-left: 2px;
-      font-size: 1.6rem;
-    }
-  }
   li {
-    margin-right: 6rem;
-
-    @media (max-width: 1060px) {
-      margin-right: 5rem;
-    }
-
-    @media (max-width: 835px) {
-      margin-right: 3rem;
-    }
-
-    @media (max-width: 670px) {
-      margin-right: 0;
-      padding: 4px 0;
-    }
+    margin-right: 66px;
   }
 
   li:last-child {
     margin-right: 0;
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
+      margin-right: 66px;
       margin-left: 0;
     }
   }
@@ -241,11 +190,8 @@ ul {
   display: flex;
   text-transform: uppercase;
 
-  @media (max-width: 670px) {
-    display: flex;
+  @media (max-width: 600px) {
     flex-direction: column;
-    text-align: right;
-    padding-top: 12px;
   }
 }
 
@@ -260,10 +206,6 @@ li {
     color: $black;
     font-size: 1.6rem;
     font-weight: 700;
-
-    @media (max-width: 835px) {
-      font-size: 1.4rem !important;
-    }
   }
 
   &:focus-within {
@@ -284,11 +226,6 @@ li {
     background: $white;
     padding: 15px 0;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
-    display: block;
-
-    @media (max-width: 670px) {
-      display: none !important;
-    }
 
     li {
       text-decoration: none;
@@ -371,32 +308,6 @@ ul li ul:focus {
 
 /* PAGE */
 .page {
-  &__button {
-    background-color: transparent;
-    border: 1px solid $black;
-    display: none;
-
-    &:hover {
-      cursor: pointer;
-      i {
-        opacity: 0.4;
-      }
-    }
-
-    i {
-      font-size: 1.8rem;
-      padding: 8px 12px;
-    }
-
-    @media (max-width: 670px) {
-      margin-top: 0 !important;
-      display: block;
-    }
-
-    @media (max-width: 600px) {
-      margin-top: -40px !important;
-    }
-  }
 
   &__container {
     padding: 1.4rem 0;
@@ -404,7 +315,7 @@ ul li ul:focus {
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 670px) {
+    @media (max-width: 600px) {
       flex-direction: column;
       align-items: flex-start;
     }
